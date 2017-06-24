@@ -110,6 +110,7 @@
 .letter-image {
   width: 200px;
   height: 200px;
+  font-size: 1rem;
 }
 
 .button {
@@ -236,7 +237,7 @@ footer {
   position: relative;
   top: 5px;
   width: 50px;
-  animation: pulse 1s ease infinite, 
+  animation: pulse 1s ease infinite,
 }
 
 @keyframes pulse {
@@ -246,10 +247,10 @@ footer {
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
+@media only screen
+and (min-device-width : 320px)
 and (max-device-width : 480px) {
-  
+
   .game {
     margin: 5px;
     padding: 5px;
@@ -312,48 +313,48 @@ and (max-device-width : 480px) {
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen 
+@media only screen
 and (min-width : 321px) {
 /* Styles */
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen 
+@media only screen
 and (max-width : 320px) {
 /* Styles */
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
+@media only screen
+and (min-device-width : 768px)
 and (max-device-width : 1024px) {
 /* Styles */
 }
 
 /* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
 and (orientation : landscape) {
 /* Styles */
 }
 
 /* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
 and (orientation : portrait) {
 /* Styles */
 }
 
 /* Desktops and laptops ----------- */
-@media only screen 
+@media only screen
 and (min-width : 1224px) {
 /* Styles */
 }
 
 /* Large screens ----------- */
-@media only screen 
+@media only screen
 and (min-width : 1824px) {
 /* Styles */
 }
