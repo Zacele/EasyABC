@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import EasyABC from './Components/EasyABC';
-import Guessing from './Components/Guessing';
 
 class App extends Component {
   render() {
@@ -12,7 +10,6 @@ class App extends Component {
           <h1>Easy spelling Game</h1>
         </div>
        <EasyABC />
-       <Guessing />
       </div>
     );
   }

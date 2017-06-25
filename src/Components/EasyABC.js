@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import alphabets from '../Json/alphabets.json';
+import classNames from 'classnames';
 import '../App.css';
 
 class EasyABC extends Component {
@@ -7,11 +8,26 @@ class EasyABC extends Component {
     super(props);
     this.state= {
       alphabets: alphabets,
-      currentPosition: 0
+      currentPosition: 0,
+      currentTick: 0
     };
+  this.next = this.next.bind(this);
   }
-
+  next(){
+    console.log('next button clicked');
+    if(this.state.currentTick < 2){
+      this.setState({
+      currentTick: this.state.currentTick + 1,
+      });
+    } else {
+      this.setState({
+      currentPosition: this.state.currentPosition + 1, currentTick: 0
+      });
+    }
+  }
   render(){
+    const showImage = this.state.currentTick !== 0 ? true :false;
+    const showWord = this.state.currentTick === 2 ? true :false;
     return (
       <div className="game">
         <div className="option">
@@ -23,7 +39,25 @@ class EasyABC extends Component {
           <div className="buttons">
             <a className="button prev">Previous</a>
             <a className="button sound">Play Sound Agian</a>
-            <a className="button next">Next</a>
+            <a onClick={this.next} className="button next">Next</a>
+          </div>
+          <div className="fields">
+            <div className="field-block">
+              <div className="left-field">
+                  <div className={classNames('placeholder-span', {hide: showImage})}>Click Next to view Image</div>
+                  <img className={classNames('letter-image', {hide: !showImage})}
+                   src={this.state.alphabets[this.state.currentPosition].image}
+                   alt={this.state.alphabets[this.state.currentPosition].word} />
+              </div>
+              <div className="right-field">
+                  <div className={classNames('placeholder-span', {hide: showWord})}>
+                    Click Next to view Spelling
+                  </div>
+                  <div className={classNames('word', {hide: !showWord})}>
+                    {this.state.alphabets[this.state.currentPosition].word}
+                  </div>
+              </div>
+            </div>
           </div>
       </div>
     </div>
